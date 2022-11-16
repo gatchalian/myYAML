@@ -10,14 +10,14 @@ trigger:
       - "*"
   paths:
     include:
-      - myNewDadApp/
+      - $(myNewDadApp)/
   
 
 pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/myNewDadApp.csproj'
+  solution: '**/$(myNewDadApp).csproj'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
